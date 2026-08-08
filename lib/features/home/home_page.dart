@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'hero_section.dart';
 import '../../shared/widgets/os_card.dart';
 import 'products_section.dart';
+import 'about_section.dart';
+import 'founder_section.dart';
+import 'contact_section.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -51,6 +54,9 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 80),
             const ProductsSection(),
+            const AboutSection(),
+            const FounderSection(),
+            const ContactSection(),
           ],
         ),
       ),

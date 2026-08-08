@@ -59,9 +59,9 @@ class ProductsSection extends StatelessWidget {
                         'assets/images/apps/screenshots/paintmaster_1.png',
                     title: 'PaintMaster',
                     description:
-                        'Komplexní systém pro autolakýrnické firmy. '
-                        'Správa zákazníků a objednávek, kalkulace, fakturace, '
-                        'databáze autolaků a kódů barev i správa e-shopu.',
+                        'Komplexní informační systém pro autolakýrnické firmy. '
+                        'Správa zakázek, fakturace, databáze barev, e-shop '
+                        'a AI asistent pro každodenní práci.',
                     buttonText: 'Zjistit více',
                     available: true,
                     onPressed: null,
