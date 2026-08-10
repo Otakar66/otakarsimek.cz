@@ -34,36 +34,49 @@ class _OSProductCardState extends State<OSProductCard> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    final isCompact = screenWidth < 700;
+
     return MouseRegion(
       cursor: SystemMouseCursors.basic,
       onEnter: (_) {
-        setState(() {
-          isHovered = true;
-        });
+        if (!isCompact) {
+          setState(() {
+            isHovered = true;
+          });
+        }
       },
       onExit: (_) {
-        setState(() {
-          isHovered = false;
-        });
+        if (!isCompact) {
+          setState(() {
+            isHovered = false;
+          });
+        }
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 180),
         curve: Curves.easeOut,
-        transform: Matrix4.translationValues(0, isHovered ? -6 : 0, 0),
-        width: 420,
-        height: 710,
-        padding: const EdgeInsets.all(OSSpacing.xl),
+        transform: Matrix4.translationValues(
+          0,
+          !isCompact && isHovered ? -6 : 0,
+          0,
+        ),
+        width: isCompact ? double.infinity : 420,
+        constraints: BoxConstraints(maxWidth: isCompact ? 460 : 420),
+        padding: EdgeInsets.all(isCompact ? OSSpacing.lg : OSSpacing.xl),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: isHovered ? OSColors.blue : OSColors.border,
+            color: !isCompact && isHovered ? OSColors.blue : OSColors.border,
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: isHovered ? 0.12 : 0.05),
-              blurRadius: isHovered ? 32 : 20,
-              offset: Offset(0, isHovered ? 14 : 8),
+              color: Colors.black.withValues(
+                alpha: !isCompact && isHovered ? 0.12 : 0.05,
+              ),
+              blurRadius: !isCompact && isHovered ? 32 : 20,
+              offset: Offset(0, !isCompact && isHovered ? 14 : 8),
             ),
           ],
         ),
@@ -74,13 +87,13 @@ class _OSProductCardState extends State<OSProductCard> {
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
                 widget.imagePath,
-                width: 96,
-                height: 96,
+                width: isCompact ? 84 : 96,
+                height: isCompact ? 84 : 96,
                 fit: BoxFit.cover,
               ),
             ),
 
-            const SizedBox(height: OSSpacing.lg),
+            SizedBox(height: isCompact ? OSSpacing.md : OSSpacing.lg),
 
             Text(widget.title, style: OSTypography.title),
 
@@ -98,17 +111,12 @@ class _OSProductCardState extends State<OSProductCard> {
 
             const SizedBox(height: OSSpacing.md),
 
-            SizedBox(
-              height: 110,
-              child: Text(
-                widget.description,
-                style: OSTypography.body.copyWith(
-                  color: OSColors.secondaryText,
-                ),
-              ),
+            Text(
+              widget.description,
+              style: OSTypography.body.copyWith(color: OSColors.secondaryText),
             ),
 
-            const SizedBox(height: OSSpacing.lg),
+            SizedBox(height: isCompact ? OSSpacing.md : OSSpacing.lg),
 
             ClipRRect(
               borderRadius: BorderRadius.circular(16),
@@ -122,19 +130,23 @@ class _OSProductCardState extends State<OSProductCard> {
               ),
             ),
 
-            const SizedBox(height: OSSpacing.xl),
+            SizedBox(height: isCompact ? OSSpacing.lg : OSSpacing.xl),
 
-            widget.available
-                ? OSButton(
-                  text: widget.buttonText,
-                  icon: Icons.apple,
-                  onPressed: widget.onPressed,
-                )
-                : OutlinedButton.icon(
-                  onPressed: widget.onPressed,
-                  icon: const Icon(Icons.schedule),
-                  label: Text(widget.buttonText),
-                ),
+            SizedBox(
+              width: isCompact ? double.infinity : null,
+              child:
+                  widget.available
+                      ? OSButton(
+                        text: widget.buttonText,
+                        icon: Icons.apple,
+                        onPressed: widget.onPressed,
+                      )
+                      : OutlinedButton.icon(
+                        onPressed: widget.onPressed,
+                        icon: const Icon(Icons.schedule),
+                        label: Text(widget.buttonText),
+                      ),
+            ),
           ],
         ),
       ),

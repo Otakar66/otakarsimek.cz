@@ -18,9 +18,13 @@ class OSCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    final isCompact = screenWidth < 700;
+
     return Container(
-      constraints: const BoxConstraints(maxWidth: 320),
-      padding: const EdgeInsets.all(OSSpacing.xl),
+      width: isCompact ? double.infinity : 320,
+      constraints: BoxConstraints(maxWidth: isCompact ? 420 : 320),
+      padding: EdgeInsets.all(isCompact ? OSSpacing.lg : OSSpacing.xl),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -35,8 +39,8 @@ class OSCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Icon(icon, size: 42, color: OSColors.blue),
-          const SizedBox(height: OSSpacing.lg),
+          Icon(icon, size: isCompact ? 38 : 42, color: OSColors.blue),
+          SizedBox(height: isCompact ? OSSpacing.md : OSSpacing.lg),
           Text(title, textAlign: TextAlign.center, style: OSTypography.title),
           const SizedBox(height: OSSpacing.md),
           Text(

@@ -16,7 +16,7 @@ class ProductsSection extends StatelessWidget {
         horizontal: OSSpacing.xxl,
         vertical: OSSpacing.xxxl,
       ),
-      color: OSColors.white,
+      color: Colors.transparent,
       child: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 1100),
