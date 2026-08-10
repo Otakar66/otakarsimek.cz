@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>404 | Stránka nebyla nalezena | Otakar Šimek Apps</title>
+
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#F2F6FC">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0A1E46;
+      background:
+        radial-gradient(
+          circle at top,
+          #D2E5FF 0%,
+          #EEF5FF 45%,
+          #F8FBFF 100%
+        );
+    }
+
+    .card {
+      width: 100%;
+      max-width: 680px;
+      padding: 56px 40px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid #DCE6F2;
+      border-radius: 24px;
+      box-shadow: 0 12px 40px rgba(10, 30, 70, 0.08);
+    }
+
+    .code {
+      margin: 0;
+      font-size: clamp(72px, 18vw, 140px);
+      line-height: 1;
+      font-weight: 700;
+      color: #1565F5;
+    }
+
+    h1 {
+      margin: 24px 0 12px;
+      font-size: clamp(28px, 6vw, 40px);
+    }
+
+    p {
+      margin: 0 auto;
+      max-width: 520px;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #5F6B7A;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 14px 24px;
+      color: #FFFFFF;
+      background: #1565F5;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition:
+        transform 160ms ease,
+        box-shadow 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(21, 101, 245, 0.22);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 40px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="code">404</div>
+
+    <h1>Stránka nebyla nalezena</h1>
+
+    <p>
+      Omlouváme se, ale stránka, kterou hledáte, neexistuje
+      nebo byla přesunuta.
+    </p>
+
+    <a class="button" href="/">
+      Zpět na hlavní stránku
+    </a>
+  </main>
+</body>
+</html>
