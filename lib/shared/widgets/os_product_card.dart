@@ -97,18 +97,6 @@ class _OSProductCardState extends State<OSProductCard> {
 
             Text(widget.title, style: OSTypography.title),
 
-            const SizedBox(height: OSSpacing.sm),
-
-            const Row(
-              children: [
-                Icon(Icons.star, color: Color(0xFFFFB800), size: 20),
-                Icon(Icons.star, color: Color(0xFFFFB800), size: 20),
-                Icon(Icons.star, color: Color(0xFFFFB800), size: 20),
-                Icon(Icons.star, color: Color(0xFFFFB800), size: 20),
-                Icon(Icons.star, color: Color(0xFFFFB800), size: 20),
-              ],
-            ),
-
             const SizedBox(height: OSSpacing.md),
 
             Text(

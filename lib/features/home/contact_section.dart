@@ -4,9 +4,22 @@ import '../../core/colors.dart';
 import '../../core/spacing.dart';
 import '../../core/typography.dart';
 import '../../shared/widgets/os_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
+
+  Future<void> _sendEmail() async {
+    final uri = Uri(
+      scheme: 'mailto',
+      path: 'info@otakarsimek.cz',
+      queryParameters: {'subject': 'Dotaz – Otakar Šimek Apps'},
+    );
+
+    if (!await launchUrl(uri)) {
+      throw Exception('Nepodařilo se otevřít e-mailového klienta.');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +111,7 @@ class ContactSection extends StatelessWidget {
                           child: OSButton(
                             text: 'Napsat e-mail',
                             icon: Icons.mail_outline,
-                            onPressed: () {},
+                            onPressed: _sendEmail,
                           ),
                         ),
                       ],

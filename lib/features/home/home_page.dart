@@ -127,13 +127,14 @@ class _HomePageState extends State<HomePage> {
                       key: _productsKey,
                       child: const ProductsSection(),
                     ),
-                    const OSFooter(),
 
                     Container(key: _aboutKey, child: const AboutSection()),
 
                     const FounderSection(),
 
                     Container(key: _contactKey, child: const ContactSection()),
+
+                    const OSFooter(),
                   ],
                 ),
               ),

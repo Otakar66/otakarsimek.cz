@@ -27,7 +27,11 @@ Flutter Web
 
 ## Stav projektu
 
-🚧 Návrh
+🟢 Produkční web
+
+Web je nasazen prostřednictvím Cloudflare Pages.
+
+Probíhá aktivace vlastní domény **otakarsimek.cz** a přechod DNS správy z WEDOS na Cloudflare.
 
 ---
 

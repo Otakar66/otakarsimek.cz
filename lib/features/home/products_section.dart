@@ -49,8 +49,8 @@ class ProductsSection extends StatelessWidget {
                     description:
                         'Osobní finance s přehledem. Sledujte příjmy, výdaje, '
                         'rozpočty a plánované platby.',
-                    buttonText: ' Stáhnout z App Store',
-                    available: true,
+                    buttonText: 'Již brzy v App Store',
+                    available: false,
                     onPressed: null,
                   ),
                   OSProductCard(
@@ -62,8 +62,8 @@ class ProductsSection extends StatelessWidget {
                         'Komplexní informační systém pro autolakýrnické firmy. '
                         'Správa zakázek, fakturace, databáze barev, e-shop '
                         'a AI asistent pro každodenní práci.',
-                    buttonText: 'Zjistit více',
-                    available: true,
+                    buttonText: 'Již brzy v App Store',
+                    available: false,
                     onPressed: null,
                   ),
                 ],
