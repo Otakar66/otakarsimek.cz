@@ -49,9 +49,11 @@ class ProductsSection extends StatelessWidget {
                     description:
                         'Osobní finance s přehledem. Sledujte příjmy, výdaje, '
                         'rozpočty a plánované platby.',
-                    buttonText: 'Již brzy v App Store',
+                    buttonText: 'Více o aplikaci',
                     available: false,
-                    onPressed: null,
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/finance-manager');
+                    },
                   ),
                   OSProductCard(
                     imagePath: 'assets/images/apps/paintmaster.png',
@@ -62,9 +64,11 @@ class ProductsSection extends StatelessWidget {
                         'Komplexní informační systém pro autolakýrnické firmy. '
                         'Správa zakázek, fakturace, databáze barev, e-shop '
                         'a AI asistent pro každodenní práci.',
-                    buttonText: 'Již brzy v App Store',
+                    buttonText: 'Více o aplikaci',
                     available: false,
-                    onPressed: null,
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/paintmaster');
+                    },
                   ),
                 ],
               ),

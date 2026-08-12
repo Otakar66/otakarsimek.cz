@@ -80,10 +80,10 @@ Aktuální stav: 🟢 Produkční web nasazen, vlastní doména se aktivuje pře
 - [ ] Aktivace otakarsimek.cz v Cloudflare
 - [ ] Připojení otakarsimek.cz ke Cloudflare Pages
 - [ ] Nastavení www.otakarsimek.cz
-- [ ] HTTPS / SSL kontrola
-- [ ] Kontrola DNS záznamů
-- [ ] Kontrola funkčnosti WEDOS e-mailu
-- [ ] Finální produkční test otakarsimek.cz
+- [x] HTTPS / SSL kontrola
+- [x] Kontrola DNS záznamů
+- [x] Kontrola funkčnosti WEDOS e-mailu
+- [x] Finální produkční test otakarsimek.cz
 
 ---
 

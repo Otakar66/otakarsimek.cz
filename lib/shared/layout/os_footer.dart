@@ -29,11 +29,52 @@ class OSFooter extends StatelessWidget {
                   color: OSColors.navy,
                 ),
               ),
+
               const SizedBox(height: OSSpacing.sm),
+
               Text(
                 'Poctivý software za poctivou cenu.',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 14, color: OSColors.secondaryText),
+                style: TextStyle(
+                  fontSize: 14,
+                  color: OSColors.secondaryText,
+                ),
+              ),
+
+              const SizedBox(height: OSSpacing.lg),
+
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: OSSpacing.md,
+                runSpacing: OSSpacing.sm,
+                children: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/privacy');
+                    },
+                    child: const Text(
+                      'Zásady ochrany soukromí',
+                    ),
+                  ),
+
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/terms');
+                    },
+                    child: const Text(
+                      'Podmínky používání',
+                    ),
+                  ),
+
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                    child: const Text(
+                      'Kontakt',
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
