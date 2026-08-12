@@ -1,6 +1,84 @@
 <!DOCTYPE html>
 <html lang="cs">
-<!-- Structured Data / JSON-LD -->
+<head>
+  <base href="/">
+  <script>
+    (function () {
+      var redirect = sessionStorage.getItem('spa-redirect');
+  
+      if (redirect) {
+        sessionStorage.removeItem('spa-redirect');
+  
+        if (redirect !== window.location.pathname) {
+          window.history.replaceState(
+            null,
+            '',
+            redirect
+          );
+        }
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Otakar Šimek Apps | Finance Manager a PaintMaster</title>
+
+  <meta
+    name="description"
+    content="Otakar Šimek Apps vytváří moderní software s důrazem na kvalitu, soukromí a férovost. Objevte Finance Manager a PaintMaster."
+  >
+
+  <meta name="author" content="Otakar Šimek">
+  <meta name="theme-color" content="#F2F6FC">
+
+  <link rel="canonical" href="https://otakarsimek.cz/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="Otakar Šimek Apps">
+
+  <meta
+    property="og:title"
+    content="Otakar Šimek Apps | Finance Manager a PaintMaster"
+  >
+
+  <meta
+    property="og:description"
+    content="Moderní aplikace s důrazem na kvalitu, soukromí a férovost. Finance Manager a PaintMaster."
+  >
+
+  <meta property="og:url" content="https://otakarsimek.cz/">
+
+  <meta
+    property="og:image"
+    content="https://otakarsimek.cz/icons/Icon-512.png"
+  >
+
+  <!-- X / Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta
+    name="twitter:title"
+    content="Otakar Šimek Apps | Finance Manager a PaintMaster"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Moderní aplikace s důrazem na kvalitu, soukromí a férovost."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://otakarsimek.cz/icons/Icon-512.png"
+  >
+
+  <!-- Structured Data: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -13,83 +91,33 @@
       "@type": "Person",
       "name": "Otakar Šimek"
     },
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Otakar Šimek Apps",
-      "url": "https://otakarsimek.cz/",
-      "inLanguage": "cs-CZ",
-      "publisher": {
-        "@type": "Organization",
-         "name": "Otakar Šimek Apps"
-      }
-    }
-    </script>
     "description": "Otakar Šimek Apps vytváří moderní software s důrazem na kvalitu, soukromí a férovost. Mezi hlavní produkty patří Finance Manager a PaintMaster.",
     "knowsAbout": [
       "Finance Manager",
       "PaintMaster",
       "osobní finance",
-      "software pro autolakýrnické firmy",        
+      "software pro autolakýrnické firmy",
       "správa zakázek",
       "fakturace",
       "databáze automobilových barev"
     ]
   }
   </script>
-<head>
-  <base href="/">
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Otakar Šimek Apps | Poctivý software za poctivou cenu</title>
-
-  <meta
-    name="description"
-    content="Otakar Šimek Apps vytváří moderní software s důrazem na kvalitu, soukromí a férovost. Objevte Finance Manager a PaintMaster."
-  >
-
-  <meta
-    name="keywords"
-    content="Otakar Šimek Apps, Finance Manager, PaintMaster, osobní finance, autolakýrnický software, aplikace, software"
-  >
-
-  <meta name="author" content="Otakar Šimek">
-  <meta name="theme-color" content="#F2F6FC">
-
-  <link rel="canonical" href="https://otakarsimek.cz/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="cs_CZ">
-  <meta property="og:site_name" content="Otakar Šimek Apps">
-  <meta
-    property="og:title"
-    content="Otakar Šimek Apps | Poctivý software za poctivou cenu"
-  >
-  <meta
-    property="og:description"
-    content="Moderní aplikace s důrazem na kvalitu, soukromí a férovost. Finance Manager a PaintMaster."
-  >
-  <meta property="og:url" content="https://otakarsimek.cz/">
-  <meta property="og:image" content="https://otakarsimek.cz/images/og-image.png">
-  <!-- X / Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta
-    name="twitter:title"
-    content="Otakar Šimek Apps | Poctivý software za poctivou cenu"
-  >
-  <meta
-    name="twitter:description"
-    content="Moderní aplikace s důrazem na kvalitu, soukromí a férovost."
-  >
-  <meta name="twitter:image" content="https://otakarsimek.cz/images/og-image.png">
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Otakar Šimek Apps",
+    "url": "https://otakarsimek.cz/",
+    "inLanguage": "cs-CZ",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Otakar Šimek Apps"
+    }
+  }
+  </script>
 
   <!-- iOS / PWA -->
   <meta name="mobile-web-app-capable" content="yes">
