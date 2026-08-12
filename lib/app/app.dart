@@ -5,6 +5,7 @@ import '../features/home/home_page.dart';
 import 'theme.dart';
 import '../features/paintmaster/paintmaster_page.dart';
 import '../features/legal/privacy_page.dart';
+import '../features/legal/terms_page.dart';
 
 class OtakarSimekApp extends StatelessWidget {
   const OtakarSimekApp({super.key});
@@ -21,6 +22,7 @@ class OtakarSimekApp extends StatelessWidget {
         '/finance-manager': (context) => const FinanceManagerPage(),
         '/paintmaster': (context) => const PaintMasterPage(),
         '/privacy': (context) => const PrivacyPage(),
+        '/terms': (context) => const TermsPage(),
       },
     );
   }
