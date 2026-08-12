@@ -1,0 +1,46 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Otakar Šimek Apps symbol</title>
+  <desc id="desc">
+    Kruhový symbol značky Otakar Šimek Apps s písmenem Š
+    a modrým dynamickým prvkem.
+  </desc>
+
+  <!-- Broken circle -->
+  <path
+    d="M 92 372
+       A 184 184 0 1 1 400 126"
+    fill="none"
+    stroke="#0A1E46"
+    stroke-width="28"
+    stroke-linecap="round"
+  />
+
+  <!-- Š -->
+  <text
+    x="256"
+    y="300"
+    text-anchor="middle"
+    fill="#0A1E46"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="220"
+    font-weight="500"
+  >
+    Š
+  </text>
+
+  <!-- Blue swoosh -->
+  <path
+    d="M 220 360
+       C 292 355, 364 304, 410 214
+       C 385 324, 320 390, 220 402
+       C 273 383, 323 342, 355 286
+       C 311 336, 266 362, 220 360
+       Z"
+    fill="#1565F5"
+  />
+</svg>

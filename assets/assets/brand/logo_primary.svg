@@ -1,0 +1,125 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1200 900"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Otakar Šimek Apps</title>
+  <desc id="desc">
+    Logo značky Otakar Šimek Apps s kruhovým symbolem Š
+    a modrým dynamickým prvkem.
+  </desc>
+
+  <defs>
+    <style>
+      .navy {
+        fill: #0A1E46;
+      }
+
+      .blue {
+        fill: #1565F5;
+      }
+
+      .navy-stroke {
+        fill: none;
+        stroke: #0A1E46;
+        stroke-width: 30;
+        stroke-linecap: round;
+      }
+
+      .blue-stroke {
+        fill: none;
+        stroke: #1565F5;
+        stroke-width: 10;
+        stroke-linecap: round;
+      }
+
+      .brand-text {
+        fill: #0A1E46;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        letter-spacing: 10px;
+      }
+
+      .apps-text {
+        fill: #1565F5;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        letter-spacing: 18px;
+      }
+    </style>
+  </defs>
+
+  <!-- Symbol -->
+  <g transform="translate(600 270)">
+    <!-- Broken circle -->
+    <path
+      class="navy-stroke"
+      d="M -165 120
+         A 205 205 0 1 1 160 -135"
+    />
+
+    <!-- Š -->
+    <text
+      x="0"
+      y="60"
+      text-anchor="middle"
+      class="navy"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="250"
+      font-weight="500"
+    >
+      Š
+    </text>
+
+    <!-- Blue swoosh / leaf -->
+    <path
+      class="blue"
+      d="M 20 155
+         C 95 150, 165 95, 205 20
+         C 180 125, 120 185, 20 190
+         C 75 175, 125 135, 155 85
+         C 110 135, 65 160, 20 155
+         Z"
+    />
+  </g>
+
+  <!-- Brand name -->
+  <text
+    x="600"
+    y="650"
+    text-anchor="middle"
+    class="brand-text"
+    font-size="72"
+  >
+    OTAKAR ŠIMEK
+  </text>
+
+  <!-- Divider lines -->
+  <line
+    x1="240"
+    y1="735"
+    x2="430"
+    y2="735"
+    class="blue-stroke"
+  />
+
+  <line
+    x1="770"
+    y1="735"
+    x2="960"
+    y2="735"
+    class="blue-stroke"
+  />
+
+  <!-- Apps -->
+  <text
+    x="600"
+    y="760"
+    text-anchor="middle"
+    class="apps-text"
+    font-size="56"
+  >
+    APPS
+  </text>
+</svg>
