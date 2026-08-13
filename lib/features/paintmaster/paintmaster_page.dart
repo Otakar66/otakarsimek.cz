@@ -390,14 +390,6 @@ class PaintMasterPage extends StatelessWidget {
                                   imagePath:
                                       'assets/images/apps/screenshots/paintmaster_4.png',
                                 ),
-                                _ScreenshotCard(
-                                  imagePath:
-                                      'assets/images/apps/screenshots/paintmaster_5.png',
-                                ),
-                                _ScreenshotCard(
-                                  imagePath:
-                                      'assets/images/apps/screenshots/paintmaster_6.png',
-                                ),
                               ],
                             ),
                           ],
