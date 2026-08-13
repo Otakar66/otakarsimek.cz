@@ -20,9 +20,13 @@ class OtakarSimekApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/finance-manager': (context) => const FinanceManagerPage(),
+        '/finance-manager/': (context) => const FinanceManagerPage(),
         '/paintmaster': (context) => const PaintMasterPage(),
+        '/paintmaster/': (context) => const PaintMasterPage(),
         '/privacy': (context) => const PrivacyPage(),
         '/terms': (context) => const TermsPage(),
+        '/privacy/': (context) => const PrivacyPage(),
+        '/terms/': (context) => const TermsPage(),
       },
     );
   }
